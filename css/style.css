@@ -1,0 +1,90 @@
+/* *{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+} */
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* flex is one dimension
+   grid is two dimension x y */
+.container{
+   display: grid;
+   grid-template-columns: repeat(3,auto);
+}
+.box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #eccc68;
+    box-shadow: 0 0  10px #5cfaff, 0 0  20px red, 0 0  5px #5cfaff;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+#status{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+button{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    color: azure;
+    background-color: #ff4757;
+    border: none;
+    border-radius: 10px;
+
+}
+#imgX{
+    width: 50px;
+    height: 50px;
+}
+#imgo{
+    width: 50px;
+    height: 50px;
+}
+
+.win{
+    animation: winAnimation ease-in-out 1s infinite;
+}
+#restart{
+    cursor: pointer;
+}
+@keyframes winAnimation{
+    0%{background-color: rgb(109, 104, 104);}
+    100%{background-color: white;}
+}
+
+h1,h3{
+    text-align: center;
+}
+h1{
+    text-shadow: 0 0  10px #5cfaff, 0 0  20px #000, 0 0  5px #000;
+    display: flex;
+}
+#header{
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px; 
+}
+#mm{
+    object-fit: fill;
+    position: absolute ;
+    z-index: -1;
+    width: 100%;
+    height: 122%;
+    opacity: .5;
+}
